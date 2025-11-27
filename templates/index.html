@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Controle de Estoque</title>
+
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+  </head>
+  <body>
+    <div class="sidebar">
+      <h3>Sistema ERP</h3>
+
+      <button
+        onclick="mudarCategoria('eletronicos')"
+        class="active"
+        id="btn-eletronicos"
+      >
+        🖥️ Periféricos
+      </button>
+      <button onclick="mudarCategoria('roupas')" id="btn-roupas">
+        👕 Roupas
+      </button>
+
+      <hr style="border-color: #555; margin: 20px 0" />
+
+      <button
+        onclick="mostrarTelaHistorico()"
+        id="btn-historico"
+        style="color: #ffc107"
+      >
+        📜 Histórico
+      </button>
+    </div>
+
+    <div class="main-content">
+      <div class="container">
+        <div id="view-produtos">
+          <h2 id="titulo-secao">🖥️ Gerenciador de Periféricos</h2>
+
+          <input type="hidden" id="id_produto" />
+          <input type="hidden" id="categoria_atual" value="eletronicos" />
+
+          <div class="form-grid">
+            <div class="form-group">
+              <label>Código:</label>
+              <input type="text" id="codigo" placeholder="Cód." />
+            </div>
+            <div class="form-group" style="flex-grow: 2">
+              <label>Nome do Produto:</label>
+              <input type="text" id="nome" placeholder="Nome do item" />
+            </div>
+            <div class="form-group" id="grupo-tamanho" style="display: none">
+              <label>Tamanho:</label>
+              <input type="text" id="tamanho" placeholder="Ex: M, GG" />
+            </div>
+            <div class="form-group">
+              <label>Qtd:</label>
+              <input type="number" id="quantidade" placeholder="0" />
+            </div>
+            <div class="form-group">
+              <label>Preço (R$):</label>
+              <input type="number" id="preco" step="0.01" placeholder="0.00" />
+            </div>
+          </div>
+
+          <div style="display: flex; gap: 10px; margin-top: 15px">
+            <button id="btn-salvar" onclick="salvarProduto()">Adicionar</button>
+            <button
+              id="btn-cancelar"
+              onclick="limparFormulario()"
+              style="background-color: #6c757d; display: none"
+            >
+              Cancelar
+            </button>
+          </div>
+
+          <hr style="margin: 25px 0; border-top: 1px solid #eee" />
+
+          <div class="form-group">
+            <input
+              type="text"
+              id="input-busca"
+              placeholder="🔍 Buscar..."
+              onkeyup="filtrarTabela()"
+            />
+          </div>
+
+          <table>
+            <thead>
+              <tr>
+                <th>Cód</th>
+                <th>Produto</th>
+                <th>Detalhe</th>
+                <th>Qtd</th>
+                <th>Valor Total</th>
+                <th>Ações</th>
+              </tr>
+            </thead>
+            <tbody id="tabela-corpo"></tbody>
+          </table>
+        </div>
+
+        <div id="view-historico" style="display: none">
+          <h2>📜 Histórico de Alterações</h2>
+          <p style="color: #666; margin-bottom: 20px">
+            Registo completo de todas as movimentações de estoque.
+          </p>
+          <button
+            onclick="carregarHistorico()"
+            style="width: auto; margin-bottom: 15px; background: #17a2b8"
+          >
+            🔄 Atualizar Lista
+          </button>
+
+          <div
+            style="
+              background: #f8f9fa;
+              padding: 20px;
+              border-radius: 8px;
+              border: 1px solid #ddd;
+            "
+          >
+            <ul
+              id="lista-historico"
+              style="list-style: none; padding: 0; color: #333"
+            ></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+  </body>
+</html>

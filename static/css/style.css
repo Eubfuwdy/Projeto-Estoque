@@ -1,0 +1,196 @@
+body {
+  font-family: "Segoe UI", sans-serif;
+  background-color: #f4f4f9;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.container {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 600px;
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #218838;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th,
+td {
+  border-bottom: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: #f8f9fa;
+}
+
+.cod-col {
+  color: #007bff;
+  font-weight: bold;
+}
+
+.btn-edit,
+.btn-delete {
+  width: auto; /* Tamanho automático (pequeno) */
+  padding: 5px 10px; /* Menos espaçamento interno */
+  margin-right: 5px; /* Espaço entre os botões */
+  font-size: 14px;
+}
+
+.btn-edit {
+  background-color: #ffc107; /* Amarelo */
+  color: #333;
+}
+.btn-edit:hover {
+  background-color: #e0a800;
+}
+
+.btn-delete {
+  background-color: #dc3545; /* Vermelho */
+  color: white;
+}
+.btn-delete:hover {
+  background-color: #c82333;
+}
+
+/* Estilo para produtos com estoque baixo */
+.alerta-estoque {
+  background-color: #ffebee; /* Fundo vermelho bem clarinho */
+  color: #c62828; /* Texto vermelho escuro */
+  font-weight: bold; /* Negrito para destacar */
+}
+
+/* Quando passar o mouse numa linha de alerta, ela fica um pouco mais escura */
+.alerta-estoque:hover {
+  background-color: #ffcdd2;
+}
+
+/* Regra Geral para Tabela */
+td {
+  vertical-align: middle; /* Centraliza verticalmente (alinha ícone com texto) */
+  white-space: nowrap; /* O SEGREDO: Impede que o texto/botões quebrem de linha */
+}
+
+/* Ajuste específico para a coluna de Ações */
+td button {
+  display: inline-block; /* Garante que os botões fiquem lado a lado */
+  margin: 0 2px; /* Um pequeno espaço entre o lápis e a lixeira */
+}
+
+/* Seus estilos de botão anteriores (mantenha-os, mas verifique o padding) */
+.btn-edit,
+.btn-delete {
+  padding: 6px 10px; /* Ajuste o padding se estiverem muito grandes */
+  font-size: 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  border: none;
+  color: white;
+}
+.btn-edit {
+  background-color: #ffc107;
+  color: #333;
+}
+.btn-delete {
+  background-color: #dc3545;
+}
+
+/* Layout Geral */
+body {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  min-height: 100vh;
+}
+
+/* Menu Lateral */
+.sidebar {
+  width: 250px;
+  background-color: #343a40;
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar h3 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.sidebar button {
+  background: none;
+  text-align: left;
+  margin-bottom: 10px;
+  opacity: 0.7;
+}
+
+.sidebar button:hover,
+.sidebar button.active {
+  background-color: #007bff;
+  opacity: 1;
+}
+
+/* Área Principal */
+.main-content {
+  flex-grow: 1;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Formulário em Linha */
+.form-grid {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.form-group {
+  flex: 1;
+  min-width: 120px;
+}
