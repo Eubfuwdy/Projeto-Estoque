@@ -15,14 +15,6 @@ Este projeto é um sistema de ERP (Enterprise Resource Planning) focado em contr
 
 O diferencial do sistema é sua **arquitetura modular**, permitindo gerenciar diferentes tipos de produtos (atualmente "Periféricos" e "Roupas") com campos dinâmicos que se adaptam à categoria selecionada. Além disso, possui um robusto **sistema de log**, registrando o "antes e depois" de cada alteração crítica.
 
-### 📸 Screenshots
-
-*(Substitua estas linhas pelos prints do seu sistema funcionando!)*
-
-| Tela Principal (Periféricos) | Tela de Histórico |
-|:---:|:---:|
-| <img src="https://via.placeholder.com/400x300?text=Print+da+Tela+Principal" width="400"> | <img src="https://via.placeholder.com/400x300?text=Print+do+Historico" width="400"> |
-
 ---
 
 ## ✨ Funcionalidades Principais
@@ -113,7 +105,6 @@ Siga os passos abaixo para executar o sistema na sua máquina.
     ```bash
     pip install -r requirements.txt
     ```
-    *(Nota: O projeto usa principalmente `Flask`. Se não tiver o arquivo requirements, rode `pip install Flask`)*
 
 5.  **Execute a aplicação:**
     ```bash
@@ -122,11 +113,5 @@ Siga os passos abaixo para executar o sistema na sua máquina.
 
 6.  **Acesse:**
     Abra seu navegador e vá para `http://127.0.0.1:5000/`.
-
----
-
-## 📝 Licença
-
-Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
 
 ---
