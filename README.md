@@ -81,7 +81,7 @@ Siga os passos abaixo para executar o sistema na sua máquina.
 
 1.  **Clone o repositório:**
     ```bash
-    git clone [https://github.com/Eubfuwdy/Projeto-Estoque.git](https://github.com/Eubfuwdy/Projeto-Estoque.git)
+    git clone [https://github.com/MarcosDev23/Projeto-Estoque.git](https://github.com/MarcosDev23/Projeto-Estoque.git)
     ```
 
 2.  **Entre na pasta do projeto:**
